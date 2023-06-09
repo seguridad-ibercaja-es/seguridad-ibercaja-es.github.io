@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'ibercaja-icon-font';
+    src: url('./fonts/ibercaja-icons-font/ibercaja-icon-font.eot');
+    src: url('./fonts/ibercaja-icons-font/ibercaja-icon-font.eot') format('embedded-opentype'),
+         url('./fonts/ibercaja-icons-font/ibercaja-icon-font.ttf') format('truetype'),
+         url('./fonts/ibercaja-icons-font/ibercaja-icon-font.woff') format('woff'),
+         url('./fonts/ibercaja-icons-font/ibercaja-icon-font.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ibercaja-icon"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'ibercaja-icon-font' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ibercaja-icon-info:before {
+    content: "\e902";
+}
+
+.ibercaja-icon-Ibercaja-logo:before {
+    content: "\e900";
+    color: #fff;
+}
+
+.ibercaja-icon-Ibercaja-logo-completo:before {
+    content: "\e901";
+    color: #fff;
+}
+
+.ibercaja-icon-Mostrar:before {
+    content: "\e92a";
+}
+
+.ibercaja-icon-Ocultar:before {
+    content: "\e92c";
+}
+
+.ibercaja-icon-Flecha-vertical:before {
+    content: "\e91f";
+}
+
+.ibercaja-icon-Chevron-abajo:before {
+    content: "\e908";
+}
+
+.ibercaja-icon-Cerrar:before {
+    content: "\e907";
+}
