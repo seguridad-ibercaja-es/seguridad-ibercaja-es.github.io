@@ -690,9 +690,6 @@ footer>ul>li:first-of-type {
     margin: 0px;
 }
 
-.content>.right .btn-secondary {
-    /* margin-top: 20px; */
-}
 
 .content>.right .sidebar-element-container {
     border-bottom: 1px solid rgba(51, 57, 62, 0.2);
