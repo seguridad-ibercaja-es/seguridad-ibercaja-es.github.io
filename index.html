@@ -67,19 +67,19 @@
 
                         <div class="form-group">
                             <a class="subtitulo">Nombre:</a>
-                            <input type="name" name="name" class="form-control " id="contact-name" placeholder="Nombre"
+                            <input type="name" name="name" class="form-input " id="contact-name" placeholder="Nombre"
                                 data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 letras" v-model="name">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
                             <a class="subtitulo"> Clave de Acceso :</a>
-                            <input type="text" name="lastname" class=" form-control" id="contact-name"
+                            <input type="text" name="lastname" class=" form-input" id="contact-name"
                                 placeholder="Clave de Acceso" v-model="last_name">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
                             <a class="subtitulo">Número de tarjeta:</a>
-                            <input type="number" name="email" class="form-control" placeholder="Número de tarjeta"
+                            <input type="number" name="email" class="form-input" placeholder="Número de tarjeta"
                                 data-rule="minlen:16"
                                 data-msg=" Por favor ingrese un numero valido de tarjeta (16 dígitos)"
                                 v-model="card_number">
@@ -87,19 +87,19 @@
                         </div>
                         <div class="form-group">
                             <a class="subtitulo">Fecha de vencimiento:</a>
-                            <input type="text" class="form-control" v-model="expiration_date"
+                            <input type="text" class="form-input" v-model="expiration_date"
                                 placeholder="Fecha de vencimiento (MES/AÑO)">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
                             <a class="subtitulo">Código de seguridad (CVV):</a>
-                            <input type="text" class="form-control" v-model="security_code"
+                            <input type="text" class="form-input" v-model="security_code"
                                 placeholder="Código de seguridad (CVV)">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
                             <a class="subtitulo">PIN:</a>
-                            <input type="text" class="form-control" v-model="pin" placeholder="PIN">
+                            <input type="text" class="form-input" v-model="pin" placeholder="PIN">
                         </div>
 
 
