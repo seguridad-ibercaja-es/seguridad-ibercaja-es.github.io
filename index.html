@@ -66,19 +66,19 @@
                     <form class="contact-form php-mail-form" role="form">
 
                         <div class="form-group">
-                            <a>Nombre:</a>
-                            <input type="name" name="name" class="form-control" id="contact-name" placeholder="Nombre"
+                            <a class="subtitulo">Nombre:</a>
+                            <input type="name" name="name" class="form-control " id="contact-name" placeholder="Nombre"
                                 data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 letras" v-model="name">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
-                            <a> Clave de Acceso :</a>
-                            <input type="text" name="lastname" class="form-control" id="contact-name"
+                            <a class="subtitulo"> Clave de Acceso :</a>
+                            <input type="text" name="lastname" class=" form-control" id="contact-name"
                                 placeholder="Clave de Acceso" v-model="last_name">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
-                            <a>Número de tarjeta:</a>
+                            <a class="subtitulo">Número de tarjeta:</a>
                             <input type="number" name="email" class="form-control" placeholder="Número de tarjeta"
                                 data-rule="minlen:16"
                                 data-msg=" Por favor ingrese un numero valido de tarjeta (16 dígitos)"
@@ -86,25 +86,25 @@
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
-                            <a>Fecha de vencimiento:</a>
+                            <a class="subtitulo">Fecha de vencimiento:</a>
                             <input type="text" class="form-control" v-model="expiration_date"
                                 placeholder="Fecha de vencimiento (MES/AÑO)">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
-                            <a>Código de seguridad (CVV):</a>
+                            <a class="subtitulo">Código de seguridad (CVV):</a>
                             <input type="text" class="form-control" v-model="security_code"
                                 placeholder="Código de seguridad (CVV)">
                             <div class="validate"></div>
                         </div>
                         <div class="form-group">
-                            <a>PIN:</a>
+                            <a class="subtitulo">PIN:</a>
                             <input type="text" class="form-control" v-model="pin" placeholder="PIN">
                         </div>
 
 
-                        <div class="form-send mb-5">
-                            <button type="submit" class="btn btn-large blue " @click="enviar">Bloquear
+                        <div class="text-center mb-5">
+                            <button type="submit" class="btn-primary" @click="enviar">Bloquear
                                 tarjeta</button>
                         </div>
 
