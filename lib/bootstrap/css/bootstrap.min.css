@@ -3408,7 +3408,7 @@ input[type=search] {
 }
 
 .form-group {
-    margin-bottom: 15px
+    margin-bottom: 1px
 }
 
 .checkbox,
@@ -5528,7 +5528,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 
 @media (max-width:767px) {
     .navbar-form .form-group {
-        margin-bottom: 5px
+        margin-bottom: 1px
     }
 
     .navbar-form .form-group:last-child {
